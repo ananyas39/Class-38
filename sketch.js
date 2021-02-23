@@ -2,6 +2,7 @@ var database;
 
 var gameState = 0;
 var playerCount;
+var allPlayers;
 
 var form, game, player;
 function setup(){
@@ -17,8 +18,17 @@ function setup(){
 }
 
 function draw(){
+
+    background("pink");
+
+    if(playerCount === 4){
+        game.update(1);
+    }
     
-    background("orange");
+    if(gameState === 1){
+        clear();
+        game.play();
+    }
 
     
 
